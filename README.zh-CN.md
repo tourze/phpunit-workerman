@@ -1,4 +1,4 @@
-# Workerman PHPUnit Testing Framework
+# Workerman PHPUnit 测试框架
 
 [English](README.md) | [中文](README.zh-CN.md)
 
@@ -112,20 +112,6 @@ class TimerTest extends AsyncTestCase
         // 验证定时器执行
         $this->assertTrue($executed);
     }
-    
-    public function testRepeatingTimer(): void
-    {
-        $count = 0;
-        
-        Timer::add(0.1, function () use (&$count) {
-            $count++;
-        }, [], true);
-        
-        // 快进 1 秒，应该执行 10 次
-        $this->advanceTime(1.0);
-        
-        $this->assertEquals(10, $count);
-    }
 }
 ```
 
@@ -213,70 +199,20 @@ abstract class AsyncTestCase extends TestCase
 }
 ```
 
-### 模拟组件
-
-#### MockEventLoop
-模拟事件循环
+### 专用断言方法
 
 ```php
-class MockEventLoop implements EventInterface
-{
-    // 时间快进
-    public function fastForward(float $seconds): void;
-    
-    // 触发事件
-    public function triggerRead($stream): void;
-    public function triggerWrite($stream): void;
-    public function triggerSignal(int $signal): void;
-    
-    // 状态查询
-    public function getCurrentTime(): float;
-    public function getTimers(): array;
-    public function hasReadEvents(): bool;
-}
-```
+// 断言连接状态
+$this->assertConnectionStatus($connection, TcpConnection::STATUS_ESTABLISHED);
 
-### Trait 组件
+// 断言连接缓冲区为空
+$this->assertConnectionBufferEmpty($connection);
 
-#### TimeControl
-时间控制相关功能
+// 断言回调被调用
+$this->assertCallbackCalled($callback, $trigger);
 
-```php
-trait TimeControl
-{
-    protected function fastForward(float $seconds): void;
-    protected function fastForwardToNextTimer(): bool;
-    protected function executeAllPendingTimers(float $maxTime = 3600.0): int;
-    protected function setCurrentTime(float $time): void;
-    protected function getCurrentTime(): float;
-}
-```
-
-#### AsyncAssertions
-异步操作断言
-
-```php
-trait AsyncAssertions
-{
-    protected function assertAsyncCallbackCalled(callable $trigger, float $timeout = 5.0): void;
-    protected function assertAsyncCallbackCalledTimes(int $expectedCount, callable $trigger): void;
-    protected function assertAsyncResult($expectedValue, callable $trigger): void;
-    protected function waitForCondition(callable $condition, float $timeout = 5.0): void;
-}
-```
-
-#### ConnectionMocking
-连接模拟功能
-
-```php
-trait ConnectionMocking
-{
-    protected function createMockConnection(?Worker $worker = null, string $remoteAddress = '127.0.0.1:12345'): TcpConnection;
-    protected function mockConnectionSend(TcpConnection $connection, string $data): bool;
-    protected function mockConnectionReceive(TcpConnection $connection, string $data): void;
-    protected function mockConnectionClose(TcpConnection $connection): void;
-    protected function assertConnectionStatus(TcpConnection $connection, int $expectedStatus): void;
-}
+// 断言回调被触发
+$this->assertCallbackTriggered($callback, $trigger);
 ```
 
 ## 高级用法
@@ -308,31 +244,6 @@ public function testComplexAsyncFlow(): void
 }
 ```
 
-### 协议测试
-
-```php
-public function testHttpProtocol(): void
-{
-    $worker = $this->createWorker('tcp://127.0.0.1:8080');
-    $worker->protocol = \Workerman\Protocols\Http::class;
-    
-    $response = null;
-    $worker->onMessage = function ($connection, $request) use (&$response) {
-        $response = $request;
-        $connection->send("HTTP/1.1 200 OK\r\nContent-Length: 11\r\n\r\nHello World");
-    };
-    
-    $this->startWorker($worker);
-    
-    // 发送 HTTP 请求
-    $httpRequest = "GET / HTTP/1.1\r\nHost: localhost\r\n\r\n";
-    $this->sendDataToWorker($worker, $httpRequest);
-    
-    $this->assertNotNull($response);
-    $this->assertStringContainsString('GET /', (string)$response);
-}
-```
-
 ### 高并发连接测试
 
 ```php
@@ -350,35 +261,6 @@ public function testHighConcurrency(): void
     
     $this->assertEquals(1000, $connectionCount);
     $this->assertCount(1000, $connections);
-}
-```
-
-### 错误处理测试
-
-```php
-public function testErrorHandling(): void
-{
-    $worker = $this->createWorker();
-    $errorHandled = false;
-    
-    $worker->onError = function ($connection, $code, $msg) use (&$errorHandled) {
-        $errorHandled = true;
-        $this->assertEquals(500, $code);
-        $this->assertEquals('测试错误', $msg);
-    };
-    
-    $worker->onMessage = function ($connection, $data) {
-        if ($data === 'error') {
-            throw new \RuntimeException('测试错误');
-        }
-    };
-    
-    $this->startWorker($worker);
-    
-    // 触发错误
-    $this->sendDataToWorker($worker, 'error');
-    
-    $this->assertTrue($errorHandled);
 }
 ```
 
@@ -402,15 +284,7 @@ class MyTest extends WorkermanTestCase
 }
 ```
 
-### 2. 异步操作超时
-为异步操作设置合理的超时时间
-
-```php
-$this->waitFor(fn() => $condition, 5.0); // 5秒超时
-$this->runAsync($operation, 10.0); // 10秒超时
-```
-
-### 3. 时间控制
+### 2. 时间控制
 使用时间快进而不是真实等待
 
 ```php
@@ -421,13 +295,12 @@ $this->fastForward(2.0);
 sleep(2);
 ```
 
-### 4. 连接清理
-及时清理连接和资源
+### 3. 异步操作超时
+为异步操作设置合理的超时时间
 
 ```php
-$connection = $this->createMockConnection($worker);
-// ... 测试逻辑
-$this->mockConnectionClose($connection); // 测试结束前清理
+$this->waitFor(fn() => $condition, 5.0); // 5秒超时
+$this->runAsync($operation, 10.0); // 10秒超时
 ```
 
 ## 常见问题

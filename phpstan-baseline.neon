@@ -1,0 +1,19 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Class cognitive complexity is 60, keep it under 50$#'
+			identifier: complexity.classLike
+			count: 1
+			path: tests/Examples/RealWorkerApplicationTest.php
+
+		-
+			message: '#^Cognitive complexity for "Tourze\\PHPUnitWorkerman\\Tests\\Examples\\RealWorkerApplicationTest\:\:createCustomWorker\(\)" is 12, keep it under 10$#'
+			identifier: complexity.functionLike
+			count: 1
+			path: tests/Examples/RealWorkerApplicationTest.php
+
+		-
+			message: '#^Dynamic call to static method PHPUnit\\Framework\\Assert\:\:fail\(\)\.$#'
+			identifier: staticMethod.dynamicCall
+			count: 8
+			path: tests/Mock/MockEventLoopTest.php

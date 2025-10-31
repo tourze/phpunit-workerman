@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="CLI Arguments" tests="43" assertions="25" errors="39" failures="1" skipped="0" time="0.010095">
+    <testsuite name="Tests\Result\CheckResultTest" file="/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php" tests="13" assertions="7" errors="12" failures="0" skipped="0" time="0.005084">
+      <testcase name="testAddIssue" file="/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php" line="26" class="Tests\Result\CheckResultTest" classname="Tests.Result.CheckResultTest" assertions="2" time="0.002716">
+        <error type="Error">Tests\Result\CheckResultTest::testAddIssue
+Error: Call to undefined method App\Result\CheckResult::isPassed()
+
+/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php:35</error>
+      </testcase>
+      <testcase name="testAddMultipleIssues" file="/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php" line="39" class="Tests\Result\CheckResultTest" classname="Tests.Result.CheckResultTest" assertions="1" time="0.000234">
+        <error type="Error">Tests\Result\CheckResultTest::testAddMultipleIssues
+Error: Call to undefined method App\Result\CheckResult::isPassed()
+
+/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php:51</error>
+      </testcase>
+      <testcase name="testGetIssuesByType" file="/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php" line="57" class="Tests\Result\CheckResultTest" classname="Tests.Result.CheckResultTest" assertions="0" time="0.000190">
+        <error type="Error">Tests\Result\CheckResultTest::testGetIssuesByType
+Error: Call to undefined method App\Result\CheckResult::getErrors()
+
+/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php:70</error>
+      </testcase>
+      <testcase name="testGetCounts" file="/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php" line="82" class="Tests\Result\CheckResultTest" classname="Tests.Result.CheckResultTest" assertions="0" time="0.000200">
+        <error type="Error">Tests\Result\CheckResultTest::testGetCounts
+Error: Call to undefined method App\Result\CheckResult::getErrorCount()
+
+/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php:90</error>
+      </testcase>
+      <testcase name="testCreateSuccess" file="/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php" line="109" class="Tests\Result\CheckResultTest" classname="Tests.Result.CheckResultTest" assertions="0" time="0.000181">
+        <error type="Error">Tests\Result\CheckResultTest::testCreateSuccess
+Error: Call to undefined method App\Result\CheckResult::success()
+
+/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php:111</error>
+      </testcase>
+      <testcase name="testCreateWithIssues" file="/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php" line="118" class="Tests\Result\CheckResultTest" classname="Tests.Result.CheckResultTest" assertions="0" time="0.000156">
+        <error type="Error">Tests\Result\CheckResultTest::testCreateWithIssues
+Error: Call to undefined method App\Result\CheckResult::withIssues()
+
+/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php:125</error>
+      </testcase>
+      <testcase name="testMerge" file="/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php" line="133" class="Tests\Result\CheckResultTest" classname="Tests.Result.CheckResultTest" assertions="0" time="0.000176">
+        <error type="Error">Tests\Result\CheckResultTest::testMerge
+Error: Call to undefined method App\Result\CheckResult::merge()
+
+/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php:143</error>
+      </testcase>
+      <testcase name="testToArray" file="/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php" line="152" class="Tests\Result\CheckResultTest" classname="Tests.Result.CheckResultTest" assertions="0" time="0.000176">
+        <error type="Error">Tests\Result\CheckResultTest::testToArray
+Error: Call to undefined method App\Result\CheckResult::toArray()
+
+/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php:159</error>
+      </testcase>
+      <testcase name="testGetSummary" file="/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php" line="172" class="Tests\Result\CheckResultTest" classname="Tests.Result.CheckResultTest" assertions="0" time="0.000159">
+        <error type="Error">Tests\Result\CheckResultTest::testGetSummary
+Error: Call to undefined method App\Result\CheckResult::getSummary()
+
+/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php:179</error>
+      </testcase>
+      <testcase name="testGetSummaryPassed" file="/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php" line="186" class="Tests\Result\CheckResultTest" classname="Tests.Result.CheckResultTest" assertions="0" time="0.000169">
+        <error type="Error">Tests\Result\CheckResultTest::testGetSummaryPassed
+Error: Call to undefined method App\Result\CheckResult::getSummary()
+
+/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php:190</error>
+      </testcase>
+      <testcase name="testClear" file="/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php" line="196" class="Tests\Result\CheckResultTest" classname="Tests.Result.CheckResultTest" assertions="0" time="0.000146">
+        <error type="Error">Tests\Result\CheckResultTest::testClear
+Error: Call to undefined method App\Result\CheckResult::clear()
+
+/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php:202</error>
+      </testcase>
+      <testcase name="testConstructor" file="/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php" line="15" class="Tests\Result\CheckResultTest" classname="Tests.Result.CheckResultTest" assertions="1" time="0.000155">
+        <error type="Error">Tests\Result\CheckResultTest::testConstructor
+Error: Call to undefined method App\Result\CheckResult::isPassed()
+
+/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php:20</error>
+      </testcase>
+      <testcase name="testIsFixable" file="/Users/air/work/source/php-monorepo/tests/Result/CheckResultTest.php" line="96" class="Tests\Result\CheckResultTest" classname="Tests.Result.CheckResultTest" assertions="3" time="0.000428"/>
+    </testsuite>
+    <testsuite name="Tests\Result\FixResultTest" file="/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php" tests="19" assertions="7" errors="17" failures="0" skipped="0" time="0.002934">
+      <testcase name="testConstructor" file="/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php" line="14" class="Tests\Result\FixResultTest" classname="Tests.Result.FixResultTest" assertions="2" time="0.000256">
+        <error type="Error">Tests\Result\FixResultTest::testConstructor
+Error: Call to undefined method App\Result\FixResult::isSuccess()
+
+/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php:20</error>
+      </testcase>
+      <testcase name="testAddFixedCount" file="/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php" line="34" class="Tests\Result\FixResultTest" classname="Tests.Result.FixResultTest" assertions="0" time="0.000190">
+        <error type="Error">Tests\Result\FixResultTest::testAddFixedCount
+Error: Call to undefined method App\Result\FixResult::addFixedCount()
+
+/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php:38</error>
+      </testcase>
+      <testcase name="testAddError" file="/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php" line="45" class="Tests\Result\FixResultTest" classname="Tests.Result.FixResultTest" assertions="1" time="0.000179">
+        <error type="Error">Tests\Result\FixResultTest::testAddError
+Error: Call to undefined method App\Result\FixResult::isSuccess()
+
+/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php:51</error>
+      </testcase>
+      <testcase name="testIsSuccess" file="/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php" line="69" class="Tests\Result\FixResultTest" classname="Tests.Result.FixResultTest" assertions="0" time="0.000147">
+        <error type="Error">Tests\Result\FixResultTest::testIsSuccess
+Error: Call to undefined method App\Result\FixResult::isSuccess()
+
+/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php:73</error>
+      </testcase>
+      <testcase name="testGetErrorCount" file="/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php" line="82" class="Tests\Result\FixResultTest" classname="Tests.Result.FixResultTest" assertions="0" time="0.000170">
+        <error type="Error">Tests\Result\FixResultTest::testGetErrorCount
+Error: Call to undefined method App\Result\FixResult::getErrorCount()
+
+/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php:86</error>
+      </testcase>
+      <testcase name="testCreateSuccess" file="/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php" line="96" class="Tests\Result\FixResultTest" classname="Tests.Result.FixResultTest" assertions="0" time="0.000160">
+        <error type="Error">Tests\Result\FixResultTest::testCreateSuccess
+Error: Call to undefined method App\Result\FixResult::success()
+
+/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php:98</error>
+      </testcase>
+      <testcase name="testCreateSuccessWithoutCount" file="/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php" line="105" class="Tests\Result\FixResultTest" classname="Tests.Result.FixResultTest" assertions="0" time="0.000166">
+        <error type="Error">Tests\Result\FixResultTest::testCreateSuccessWithoutCount
+Error: Call to undefined method App\Result\FixResult::success()
+
+/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php:107</error>
+      </testcase>
+      <testcase name="testCreateWithErrors" file="/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php" line="114" class="Tests\Result\FixResultTest" classname="Tests.Result.FixResultTest" assertions="0" time="0.000169">
+        <error type="Error">Tests\Result\FixResultTest::testCreateWithErrors
+Error: Call to undefined method App\Result\FixResult::withErrors()
+
+/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php:117</error>
+      </testcase>
+      <testcase name="testCreateWithErrorsWithoutCount" file="/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php" line="124" class="Tests\Result\FixResultTest" classname="Tests.Result.FixResultTest" assertions="0" time="0.000167">
+        <error type="Error">Tests\Result\FixResultTest::testCreateWithErrorsWithoutCount
+Error: Call to undefined method App\Result\FixResult::withErrors()
+
+/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php:127</error>
+      </testcase>
+      <testcase name="testMerge" file="/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php" line="134" class="Tests\Result\FixResultTest" classname="Tests.Result.FixResultTest" assertions="0" time="0.000151">
+        <error type="Error">Tests\Result\FixResultTest::testMerge
+Error: Call to undefined method App\Result\FixResult::addFixedCount()
+
+/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php:142</error>
+      </testcase>
+      <testcase name="testMergeSuccessfulResults" file="/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php" line="154" class="Tests\Result\FixResultTest" classname="Tests.Result.FixResultTest" assertions="0" time="0.000154">
+        <error type="Error">Tests\Result\FixResultTest::testMergeSuccessfulResults
+Error: Call to undefined method App\Result\FixResult::success()
+
+/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php:156</error>
+      </testcase>
+      <testcase name="testToArray" file="/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php" line="166" class="Tests\Result\FixResultTest" classname="Tests.Result.FixResultTest" assertions="0" time="0.000145">
+        <error type="Error">Tests\Result\FixResultTest::testToArray
+Error: Call to undefined method App\Result\FixResult::addFixedCount()
+
+/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php:169</error>
+      </testcase>
+      <testcase name="testGetSummary" file="/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php" line="186" class="Tests\Result\FixResultTest" classname="Tests.Result.FixResultTest" assertions="0" time="0.000151">
+        <error type="Error">Tests\Result\FixResultTest::testGetSummary
+Error: Call to undefined method App\Result\FixResult::addFixedCount()
+
+/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php:189</error>
+      </testcase>
+      <testcase name="testGetSummaryWithErrors" file="/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php" line="197" class="Tests\Result\FixResultTest" classname="Tests.Result.FixResultTest" assertions="0" time="0.000154">
+        <error type="Error">Tests\Result\FixResultTest::testGetSummaryWithErrors
+Error: Call to undefined method App\Result\FixResult::addFixedCount()
+
+/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php:200</error>
+      </testcase>
+      <testcase name="testGetSummaryNoFixes" file="/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php" line="210" class="Tests\Result\FixResultTest" classname="Tests.Result.FixResultTest" assertions="0" time="0.000151">
+        <error type="Error">Tests\Result\FixResultTest::testGetSummaryNoFixes
+Error: Call to undefined method App\Result\FixResult::getSummary()
+
+/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php:214</error>
+      </testcase>
+      <testcase name="testClear" file="/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php" line="219" class="Tests\Result\FixResultTest" classname="Tests.Result.FixResultTest" assertions="0" time="0.000154">
+        <error type="Error">Tests\Result\FixResultTest::testClear
+Error: Call to undefined method App\Result\FixResult::addFixedCount()
+
+/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php:222</error>
+      </testcase>
+      <testcase name="testGetFirstError" file="/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php" line="233" class="Tests\Result\FixResultTest" classname="Tests.Result.FixResultTest" assertions="0" time="0.000155">
+        <error type="Error">Tests\Result\FixResultTest::testGetFirstError
+Error: Call to undefined method App\Result\FixResult::getFirstError()
+
+/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php:237</error>
+      </testcase>
+      <testcase name="testIncrementFixedCount" file="/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php" line="23" class="Tests\Result\FixResultTest" classname="Tests.Result.FixResultTest" assertions="2" time="0.000061"/>
+      <testcase name="testHasErrors" file="/Users/air/work/source/php-monorepo/tests/Result/FixResultTest.php" line="59" class="Tests\Result\FixResultTest" classname="Tests.Result.FixResultTest" assertions="2" time="0.000055"/>
+    </testsuite>
+    <testsuite name="Tests\Result\IssueTest" file="/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php" tests="11" assertions="11" errors="10" failures="1" skipped="0" time="0.002077">
+      <testcase name="testConstructor" file="/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php" line="14" class="Tests\Result\IssueTest" classname="Tests.Result.IssueTest" assertions="2" time="0.000157">
+        <error type="Error">Tests\Result\IssueTest::testConstructor
+Error: Call to undefined method App\Result\Issue::getFile()
+
+/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php:20</error>
+      </testcase>
+      <testcase name="testConstructorWithoutFile" file="/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php" line="23" class="Tests\Result\IssueTest" classname="Tests.Result.IssueTest" assertions="2" time="0.000153">
+        <error type="Error">Tests\Result\IssueTest::testConstructorWithoutFile
+Error: Call to undefined method App\Result\Issue::getFile()
+
+/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php:29</error>
+      </testcase>
+      <testcase name="testIsError" file="/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php" line="32" class="Tests\Result\IssueTest" classname="Tests.Result.IssueTest" assertions="0" time="0.000145">
+        <error type="Error">Tests\Result\IssueTest::testIsError
+Error: Call to undefined method App\Result\Issue::isError()
+
+/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php:38</error>
+      </testcase>
+      <testcase name="testIsWarning" file="/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php" line="43" class="Tests\Result\IssueTest" classname="Tests.Result.IssueTest" assertions="0" time="0.000151">
+        <error type="Error">Tests\Result\IssueTest::testIsWarning
+Error: Call to undefined method App\Result\Issue::isWarning()
+
+/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php:49</error>
+      </testcase>
+      <testcase name="testIsInfo" file="/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php" line="54" class="Tests\Result\IssueTest" classname="Tests.Result.IssueTest" assertions="0" time="0.000142">
+        <error type="Error">Tests\Result\IssueTest::testIsInfo
+Error: Call to undefined method App\Result\Issue::isInfo()
+
+/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php:60</error>
+      </testcase>
+      <testcase name="testCreateError" file="/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php" line="65" class="Tests\Result\IssueTest" classname="Tests.Result.IssueTest" assertions="2" time="0.000154">
+        <error type="Error">Tests\Result\IssueTest::testCreateError
+Error: Call to undefined method App\Result\Issue::getFile()
+
+/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php:71</error>
+      </testcase>
+      <testcase name="testCreateWarning" file="/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php" line="75" class="Tests\Result\IssueTest" classname="Tests.Result.IssueTest" assertions="2" time="0.000152">
+        <error type="Error">Tests\Result\IssueTest::testCreateWarning
+Error: Call to undefined method App\Result\Issue::getFile()
+
+/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php:81</error>
+      </testcase>
+      <testcase name="testCreateInfo" file="/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php" line="85" class="Tests\Result\IssueTest" classname="Tests.Result.IssueTest" assertions="2" time="0.000139">
+        <error type="Error">Tests\Result\IssueTest::testCreateInfo
+Error: Call to undefined method App\Result\Issue::getFile()
+
+/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php:91</error>
+      </testcase>
+      <testcase name="testToString" file="/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php" line="95" class="Tests\Result\IssueTest" classname="Tests.Result.IssueTest" assertions="0" time="0.000171">
+        <error type="Error">Tests\Result\IssueTest::testToString
+Error: Object of class App\Result\Issue could not be converted to string
+
+/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php:100</error>
+      </testcase>
+      <testcase name="testToStringWithoutFile" file="/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php" line="103" class="Tests\Result\IssueTest" classname="Tests.Result.IssueTest" assertions="0" time="0.000184">
+        <error type="Error">Tests\Result\IssueTest::testToStringWithoutFile
+Error: Object of class App\Result\Issue could not be converted to string
+
+/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php:108</error>
+      </testcase>
+      <testcase name="testInvalidSeverity" file="/Users/air/work/source/php-monorepo/tests/Result/IssueTest.php" line="111" class="Tests\Result\IssueTest" classname="Tests.Result.IssueTest" assertions="1" time="0.000529">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Result\IssueTest::testInvalidSeverity
+Failed asserting that exception of type "InvalidArgumentException" is thrown.</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>
