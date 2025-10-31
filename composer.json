@@ -7,7 +7,6 @@
     "symfony/dependency-injection": "^7.3",
     "symfony/framework-bundle": "^7.3",
     "symfony/yaml": "^7.3",
-    "tourze/symfony-testing-framework": "0.0.*",
     "workerman/workerman": "^5.1"
   },
   "require-dev": {
